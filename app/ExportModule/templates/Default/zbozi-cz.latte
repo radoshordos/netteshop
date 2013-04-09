@@ -1,0 +1,7 @@
+{block #content}
+{foreach $presenter->getProducts() as $product}
+    <SHOPITEM>
+        <PRODUCTNAME>{$product->prod_name}</PRODUCTNAME>
+        <DESCRIPTION>{$product->prod_desc}</DESCRIPTION>
+    </SHOPITEM>
+{/foreach}
