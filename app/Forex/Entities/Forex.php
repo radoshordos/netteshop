@@ -1,32 +1,38 @@
 <?php
 
-class ForexColumn extends Nette\Object {
+namespace Forex\Entities;
 
-    private $id;
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * @ORM\Entity
+ * @ORM\Table(name="forex")
+ */
+class Forex extends \Nette\Object {
+    
+    /** 
+     * @ORM\Id
+     * @ORM\Column(type="string", unique=true, length=5)
+     */
     private $code;
+    
+    /** @ORM\Column(type="string", length=5) */
     private $currency;
+    
+    /** @ORM\Column(type="decimal", precision=10, scale=3) */
     private $exchangeRate;
+    
+    /** @ORM\Column(type="integer") */
     private $roundDphWith;
-    private $roundDphNo;
+    
+    /** @ORM\Column(type="integer") */
+    private $roundDphWithout;
+    
+    /** @ORM\Column(type="string") */
     private $cnbDate;
-
-    function __construct($id, $code, $currency, $exchangeRate, $roundDphWith, $roundDphNo, $cnbDate) {
-        $this->id = $id;
-        $this->code = $code;
-        $this->currency = $currency;
-        $this->exchangeRate = $exchangeRate;
-        $this->roundDphWith = $roundDphWith;
-        $this->roundDphNo = $roundDphNo;
-        $this->cnbDate = $cnbDate;
-    }
-
-    public function getId() {
-        return $this->id;
-    }
-
-    public function setId($id) {
-        $this->id = (int) $id;
-        return $this;
+    
+    public function format($number) {
+        return $number / $this->exchangeRate;
     }
 
     public function getCode() {
@@ -70,7 +76,7 @@ class ForexColumn extends Nette\Object {
     }
 
     public function setRoundDphNo($roundDphNo) {
-        $this->roundDphNo = (int) $roundDphNo;
+        $this->roundDphNo = (int)$roundDphNo;
         return $this;
     }
 
@@ -84,5 +90,3 @@ class ForexColumn extends Nette\Object {
     }
 
 }
-
-?>

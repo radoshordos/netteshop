@@ -6,6 +6,12 @@
 #
 common:
 	parameters:
+		database:
+			driver: pdo_mysql
+			dbname: nextbike
+			user: root
+			password: atad
+			host: localhost
 
 	php:
 		date.timezone: Europe/Prague
@@ -16,7 +22,7 @@ common:
 			errorPresenter: Error
 
 		database:
-			dsn: 'mysql:host=localhost;dbname=nextshop'
+			dsn: 'mysql:host=localhost;dbname=nextbike'
 			user: 'root'
 			password: 'atad'
 
@@ -39,7 +45,18 @@ common:
 			class: EshopRoute
 			autowired: false
 
+		forexManager:
+			class: Forex\ForexManager
+
 	factories:
+
+	doctrine:
+		connection: %database%
+
+		entityDirs:
+			- %appDir%
+
+		console: true
 
 
 production < common:

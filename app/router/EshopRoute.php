@@ -60,7 +60,7 @@ class EshopRoute extends \Nette\Application\Routers\Route {
     }
 
     private function getTable() {
-        return $this->connection->table('view2tree1');
+        return $this->connection->table('view2tree2');
     }
 
 }

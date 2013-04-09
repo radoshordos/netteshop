@@ -15,12 +15,16 @@ $configurator->enableDebugger(__DIR__ . '/../log');
 $configurator->setTempDirectory(__DIR__ . '/../temp');
 $configurator->createRobotLoader()
 	->addDirectory(__DIR__)
-	->addDirectory(__DIR__ . '/../libs')
+//	->addDirectory(__DIR__ . '/../libs')
 	->register();
 
 // Create Dependency Injection container from config.neon file
 $configurator->addConfig(__DIR__ . '/config/config.neon');
 $configurator->addConfig(__DIR__ . '/config/config.local.neon', $configurator::NONE); // none section
+
+Nella\Console\Config\Extension::register($configurator);
+\Nella\Doctrine\Config\Extension::register($configurator);
+
 $container = $configurator->createContainer();
 
 return $container;

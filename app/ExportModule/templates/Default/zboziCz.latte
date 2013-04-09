@@ -3,5 +3,6 @@
     <SHOPITEM>
         <PRODUCTNAME>{$product->prod_name}</PRODUCTNAME>
         <DESCRIPTION>{$product->prod_desc}</DESCRIPTION>
+        <PRICE>{$presenter->forexManager->format($product->prod_items_price_visible_minimum)}</PRICE>
     </SHOPITEM>
 {/foreach}

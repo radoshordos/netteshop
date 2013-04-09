@@ -1,6 +1,322 @@
 {
-    "hash": "ef6e0bf04a1c5036af208b25bf7f8308",
+    "hash": "a8e1d426ab65fba150b6c68458753072",
     "packages": [
+        {
+            "name": "doctrine/common",
+            "version": "2.3.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/doctrine/common",
+                "reference": "2.3.0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://github.com/doctrine/common/zipball/2.3.0",
+                "reference": "2.3.0",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.2"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.3.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Doctrine\\Common": "lib/"
+                }
+            },
+            "notification-url": "http://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jonathan Wage",
+                    "email": "jonwage@gmail.com",
+                    "homepage": "http://www.jwage.com/"
+                },
+                {
+                    "name": "Guilherme Blanco",
+                    "email": "guilhermeblanco@gmail.com",
+                    "homepage": "http://www.instaclick.com"
+                },
+                {
+                    "name": "Roman Borschel",
+                    "email": "roman@code-factory.org"
+                },
+                {
+                    "name": "Benjamin Eberlei",
+                    "email": "kontakt@beberlei.de"
+                },
+                {
+                    "name": "Johannes Schmitt",
+                    "email": "schmittjoh@gmail.com",
+                    "homepage": "http://jmsyst.com",
+                    "role": "Developer of wrapped JMSSerializerBundle"
+                }
+            ],
+            "description": "Common Library for Doctrine projects",
+            "homepage": "http://www.doctrine-project.org",
+            "keywords": [
+                "annotations",
+                "collections",
+                "eventmanager",
+                "persistence",
+                "spl"
+            ],
+            "time": "2012-09-19 22:55:18"
+        },
+        {
+            "name": "doctrine/dbal",
+            "version": "2.3.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/doctrine/dbal.git",
+                "reference": "2.3.3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/doctrine/dbal/zipball/2.3.3",
+                "reference": "2.3.3",
+                "shasum": ""
+            },
+            "require": {
+                "doctrine/common": ">=2.3.0,<2.5-dev",
+                "php": ">=5.3.2"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.3.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Doctrine\\DBAL": "lib/"
+                }
+            },
+            "notification-url": "http://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jonathan Wage",
+                    "email": "jonwage@gmail.com",
+                    "homepage": "http://www.jwage.com/"
+                },
+                {
+                    "name": "Guilherme Blanco",
+                    "email": "guilhermeblanco@gmail.com",
+                    "homepage": "http://www.instaclick.com"
+                },
+                {
+                    "name": "Roman Borschel",
+                    "email": "roman@code-factory.org"
+                },
+                {
+                    "name": "Benjamin Eberlei",
+                    "email": "kontakt@beberlei.de"
+                }
+            ],
+            "description": "Database Abstraction Layer",
+            "homepage": "http://www.doctrine-project.org",
+            "keywords": [
+                "database",
+                "dbal",
+                "persistence",
+                "queryobject"
+            ],
+            "time": "2013-03-24 19:16:29"
+        },
+        {
+            "name": "doctrine/orm",
+            "version": "2.3.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/doctrine/doctrine2.git",
+                "reference": "2.3.3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/doctrine/doctrine2/zipball/2.3.3",
+                "reference": "2.3.3",
+                "shasum": ""
+            },
+            "require": {
+                "doctrine/dbal": "2.3.*",
+                "ext-pdo": "*",
+                "php": ">=5.3.2",
+                "symfony/console": "2.*"
+            },
+            "suggest": {
+                "symfony/yaml": "If you want to use YAML Metadata Mapping Driver"
+            },
+            "bin": [
+                "bin/doctrine",
+                "bin/doctrine.php"
+            ],
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.3.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Doctrine\\ORM": "lib/"
+                }
+            },
+            "notification-url": "http://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jonathan Wage",
+                    "email": "jonwage@gmail.com",
+                    "homepage": "http://www.jwage.com/"
+                },
+                {
+                    "name": "Guilherme Blanco",
+                    "email": "guilhermeblanco@gmail.com",
+                    "homepage": "http://www.instaclick.com"
+                },
+                {
+                    "name": "Roman Borschel",
+                    "email": "roman@code-factory.org"
+                },
+                {
+                    "name": "Benjamin Eberlei",
+                    "email": "kontakt@beberlei.de"
+                }
+            ],
+            "description": "Object-Relational-Mapper for PHP",
+            "homepage": "http://www.doctrine-project.org",
+            "keywords": [
+                "database",
+                "orm"
+            ],
+            "time": "2013-03-24 20:43:58"
+        },
+        {
+            "name": "nella/console",
+            "version": "dev-master",
+            "target-dir": "Nella/Console",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/nella/console.git",
+                "reference": "381b685f31ac56d04c927090e8e7576f238a5f77"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/nella/console/zipball/381b685f31ac56d04c927090e8e7576f238a5f77",
+                "reference": "381b685f31ac56d04c927090e8e7576f238a5f77",
+                "shasum": ""
+            },
+            "require": {
+                "nette/nette": "2.0.*",
+                "php": ">=5.3.2",
+                "symfony/console": "2.*"
+            },
+            "type": "nette-addon",
+            "autoload": {
+                "psr-0": {
+                    "Nella\\Console": "./"
+                }
+            },
+            "notification-url": "http://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause",
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Patrik Votoček",
+                    "email": "patrik@votocek.cz",
+                    "homepage": "http://patrik.votocek.cz",
+                    "role": "Developer"
+                },
+                {
+                    "name": "Nella Project",
+                    "homepage": "http://nella-project.org"
+                }
+            ],
+            "description": "Symfony 2 Console addon for Nette Framework",
+            "homepage": "http://nellafw.org",
+            "keywords": [
+                "addon",
+                "console",
+                "nella",
+                "nette",
+                "symfony"
+            ],
+            "time": "2012-09-23 04:42:39"
+        },
+        {
+            "name": "nella/doctrine",
+            "version": "dev-master",
+            "target-dir": "Nella/Doctrine",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/nella/doctrine.git",
+                "reference": "392e4fa65c85dd1892dfe562ab799994d5741f17"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/nella/doctrine/zipball/392e4fa65c85dd1892dfe562ab799994d5741f17",
+                "reference": "392e4fa65c85dd1892dfe562ab799994d5741f17",
+                "shasum": ""
+            },
+            "require": {
+                "doctrine/orm": "2.3.*",
+                "nette/nette": "2.0.*",
+                "php": ">=5.3.2"
+            },
+            "suggest": {
+                "doctrine/migrations": "Need for migrations support",
+                "nella/console": "Need for console support",
+                "nella/gedmo": "Integrate Doctrine Gedmo extension to Nette Framework"
+            },
+            "type": "nette-addon",
+            "autoload": {
+                "psr-0": {
+                    "Nella\\Doctrine": "./"
+                }
+            },
+            "notification-url": "http://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause",
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Patrik Votoček",
+                    "email": "patrik@votocek.cz",
+                    "homepage": "http://patrik.votocek.cz",
+                    "role": "Developer"
+                },
+                {
+                    "name": "Nella Project",
+                    "homepage": "http://nella-project.org"
+                }
+            ],
+            "description": "Doctrine 2 ORM and Migrations addon for Nette Framework",
+            "homepage": "http://nellafw.org",
+            "keywords": [
+                "addon",
+                "doctrine",
+                "migrations",
+                "nella",
+                "nette",
+                "orm"
+            ],
+            "time": "2013-02-18 18:39:06"
+        },
         {
             "name": "nette/nette",
             "version": "v2.0.10",
@@ -74,14 +390,115 @@
                 "templating"
             ],
             "time": "2013-03-08 15:44:35"
+        },
+        {
+            "name": "symfony/console",
+            "version": "v2.2.1",
+            "target-dir": "Symfony/Component/Console",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/Console.git",
+                "reference": "v2.2.1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/Console/zipball/v2.2.1",
+                "reference": "v2.2.1",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.3"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.2-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Symfony\\Component\\Console\\": ""
+                }
+            },
+            "notification-url": "http://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "http://symfony.com/contributors"
+                }
+            ],
+            "description": "Symfony Console Component",
+            "homepage": "http://symfony.com",
+            "time": "2013-03-19 20:48:08"
         }
     ],
-    "packages-dev": null,
+    "packages-dev": [
+        {
+            "name": "nette/tester",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/nette/tester.git",
+                "reference": "848e7d9e6ca8f3a580d76e11a0da68c128330b8a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/nette/tester/zipball/848e7d9e6ca8f3a580d76e11a0da68c128330b8a",
+                "reference": "848e7d9e6ca8f3a580d76e11a0da68c128330b8a",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "bin": [
+                "Tester/tester"
+            ],
+            "type": "library",
+            "autoload": {
+                "classmap": [
+                    "Tester/"
+                ]
+            },
+            "notification-url": "http://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause",
+                "GPL-2.0",
+                "GPL-3.0"
+            ],
+            "authors": [
+                {
+                    "name": "David Grudl",
+                    "homepage": "http://davidgrudl.com"
+                },
+                {
+                    "name": "Nette Community",
+                    "homepage": "http://nette.org/contributors"
+                }
+            ],
+            "description": "An easy-to-use PHP Unit Testing framework.",
+            "homepage": "http://nette.org",
+            "keywords": [
+                "nette",
+                "testing",
+                "unit"
+            ],
+            "time": "2013-03-31 01:55:40"
+        }
+    ],
     "aliases": [
 
     ],
     "minimum-stability": "stable",
     "stability-flags": {
+        "nella/doctrine": 20,
+        "nella/console": 20,
         "nette/tester": 20
     },
     "platform": {
